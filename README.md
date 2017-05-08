@@ -2,7 +2,7 @@
 dylib injector for mach-o binaries
 
 ## API
-```
+```objective-c
 /**
 dylib injector for mach-o binaries
 
@@ -14,6 +14,6 @@ dylib injector for mach-o binaries
 
 
 ## Usage
-```
+```objective-c
 [NEInjector injectMachoPath:@"~.xxx/Payload/xxx.app/machoFileName" dylibPath:@"~.xxx/Payload/xxx.app/xxxx.dylib"];
 ```
