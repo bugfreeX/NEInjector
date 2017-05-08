@@ -1,15 +1,15 @@
 //
-//  NEInject.m
-//  NEInject
+//  NEInjector.m
+//  NEInjector
 //
 //  Created by Nelson on 2017/5/8.
 //  Copyright © 2017年 Nelson. All rights reserved.
 //
 
-#import "NEInject.h"
+#import "NEInjector.h"
 #include <mach-o/loader.h>
 #include <mach-o/fat.h>
-@implementation NEInject
+@implementation NEInjector
 +(void)injectMachoPath:(NSString *)machoPath dylibPath:(NSString *)dylibPath{
     int fd = open(machoPath.UTF8String, O_RDWR, 0777);
     if (fd < 0)
@@ -48,7 +48,7 @@
             for (NSNumber *offsetNum in offsetArray)
             {
                 lseek(fd, [offsetNum unsignedIntValue], SEEK_SET);
-                [self injectArchitecture:fd dylibPath:dylibPath exePath:machOPath];
+                [self injectArchitecture:fd dylibPath:dylibPath exePath:machoPath];
             }
         }
         close(fd);

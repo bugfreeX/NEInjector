@@ -1,4 +1,4 @@
-##NEInject
+##NEInjector
 dylib injector for mach-o binaries
 
 ###API
@@ -15,5 +15,5 @@ dylib injector for mach-o binaries
 
 ##Usage
 ```
-[NEInject injectMachoPath:@"~.xxx/Payload/xxx.app/execFileName" dylibPath:@"~.xxx/Payload/xxx.app/xxxx.dylib"];
+[NEInjector injectMachoPath:@"~.xxx/Payload/xxx.app/machoFileName" dylibPath:@"~.xxx/Payload/xxx.app/xxxx.dylib"];
 ```
